@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222222;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 520px;
+    width: 100%;
+}
+
+h2 {
+    color: #048f8f;
+    font-size: 18px;
+    margin-bottom: 18px;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+/* Форма та валідація */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 9px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #048f8f;
+}
+
+.error-msg {
+    display: none;
+    color: #d9534f;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Підсвічування помилкового рядка */
+.form-group.invalid input {
+    border: 2px solid #d9534f;
+    background-color: #fdf2f2;
+}
+
+.form-group.invalid .error-msg {
+    display: block;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 11px;
+    background-color: #048f8f;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #036a6a;
+}
+
+/* Палітра та Таблиця 6х6 */
+.palette-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#color-picker {
+    cursor: pointer;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: none;
+}
+
+#matrix-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#matrix-table td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #048f8f;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}

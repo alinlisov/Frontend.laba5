@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лісова А. М. ІС-42, Варіант 134 — Лабораторна №5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ІС-42 Лісова Аліна, Варіант №14</h1>
+    <!-- ЗАВДАННЯ 1: Форма  -->
+    <section class="card">
+        <h2>Завдання 1. Валідація форми (Варіант №14)</h2>
+        <form id="val-form" novalidate> 
+            <div class="form-group">
+                <label for="fullname">ПІБ (формат: ТТТТТТ Т.Т.):</label>
+                <input type="text" id="fullname" placeholder="Лісова А.М.">
+                <span class="error-msg">Формат: Прізвище І.О. (наприклад: Лісова А.М.)</span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон (формат: (ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ):</label>
+                <input type="text" id="phone" placeholder="(097)-123-45-67">
+                <span class="error-msg">Формат: (097)-123-45-67</span>
+            </div>
+            <div class="form-group">
+                <label for="idcard">ID-картка (формат: ТТ №ЧЧЧЧЧЧ):</label>
+                <input type="text" id="idcard" placeholder="КХ №123456">
+                <span class="error-msg">Формат: 2 літери №6 цифр (наприклад: КХ №123456)</span>
+            </div>
+            <div class="form-group">
+                <label for="dob">Дата народження (формат: ЧЧ.ЧЧ.ЧЧЧЧ):</label>
+                <input type="text" id="dob" placeholder="09.05.2007">
+                <span class="error-msg">Формат: ДД.ММ.РРРР (наприклад: 09.05.2007)</span>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail (формат: tttttt@ттттт.com):</label>
+                <input type="email" id="email" placeholder="alina@gmail.com">
+                <span class="error-msg">Формат: name@domain.com</span>
+            </div>
+            <button type="submit" id="btn-submit">Підтвердити</button>
+        </form>
+    </section>
+    <!-- ЗАВДАННЯ 2:  таблиця -->
+    <section class="card">
+        <h2>Завдання 2. Інтерактивна таблиця 6x6</h2>
+        <div class="palette-container">
+            <label for="color-picker">Оберіть колір для Click/dblClick:</label>
+            <input type="color" id="color-picker" value="#048f8f">
+        </div>       
+        <table id="matrix-table">
+            <!-- Динамічно заповнюється через script.js -->
+        </table>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
